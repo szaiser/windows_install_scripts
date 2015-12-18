@@ -1,0 +1,33 @@
+Set-ExplorerOptions -showProtectedOSFiles -showFileExtensions
+
+Enable-RemoteDesktop
+
+cinst flashplayerplugin
+cinst install notepadplusplus.install 
+cinst firefox
+cinst googlechrome
+cinst 7zip.install
+cinst git.install
+cinst winscp.install 
+cinst tortoisehg 
+cinst teamviewer
+cinst windirstat
+cinst consolez
+cinst foxitreader 
+cinst sumatrapdf.install
+cinst pdfxchangeviewer
+cinst autohotkey.install 
+cinst irfanview 
+cinst inkscape
+cinst lockhunter 
+cinst qttabbar
+cinst skype
+cinst sysinternals
+cinst pycharm-community -version 5.0.2.20151218
+
+cinst zotero-standalone 
+cinst thunderbird
+cinst install kitty.portable 
+cinst gimp
+cinst steam
+cinst spotify
