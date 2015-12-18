@@ -3,7 +3,7 @@ Set-ExplorerOptions -showProtectedOSFiles -showFileExtensions
 Enable-RemoteDesktop
 
 cinst flashplayerplugin
-cinst install notepadplusplus.install 
+cinst notepadplusplus.install 
 cinst firefox
 cinst googlechrome
 cinst 7zip.install
@@ -31,3 +31,5 @@ cinst install kitty.portable
 cinst gimp
 cinst steam
 cinst spotify
+
+START http://boxstarter.org/package/url?https://raw.githubusercontent.com/szaiser/windows_install_scripts/master/windows_install_script.txt

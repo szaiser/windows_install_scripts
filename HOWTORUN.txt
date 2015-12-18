@@ -1,0 +1,5 @@
+
+
+In InternetExplorer oder Edge die untere URL aufrufen. evtl muss die URL /url? geändert werden
+
+http://boxstarter.org/package/url?https://raw.githubusercontent.com/szaiser/windows_install_scripts/master/windows_install_script.txt
