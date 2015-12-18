@@ -20,7 +20,7 @@ cinst autohotkey.install
 cinst irfanview 
 cinst inkscape
 cinst lockhunter 
-cinst qttabbar
+cinst clover
 cinst skype
 cinst sysinternals
 cinst pycharm-community -version 5.0.2.20151218
@@ -31,5 +31,3 @@ cinst install kitty.portable
 cinst gimp
 cinst steam
 cinst spotify
-
-START http://boxstarter.org/package/url?https://raw.githubusercontent.com/szaiser/windows_install_scripts/master/windows_install_script.txt
