@@ -2,6 +2,7 @@ Set-ExplorerOptions -showProtectedOSFiles -showFileExtensions
 
 Enable-RemoteDesktop
 
+cinst chocolatey
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
