@@ -3,6 +3,7 @@ Set-ExplorerOptions -showProtectedOSFiles -showFileExtensions
 Enable-RemoteDesktop
 
 cinst chocolatey
+cinst chocolateygui
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
@@ -23,7 +24,8 @@ cinst irfanview
 cinst lockhunter 
 cinst skype
 cinst sysinternals
-#cinst pycharm-community -version 5.0.2.20151218
+#cinst pycharm-community
+#cinst canopy
 
 #cinst zotero-standalone 
 #cinst thunderbird
