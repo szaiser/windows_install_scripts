@@ -7,8 +7,32 @@ Enable-RemoteDesktop
 #not sure if right way of doing it.
 #Set-ItemProperty -Path REG:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Beep\ -Name Start -Value 4 
 
+##################################################################################################################
+# partly Disable windows sounds
+##################################################################################################################
+Push-Location
 
-REG:\HKEY_CURRENT_USER\AppEvents\Schemes\Apps\.Default\WindowsUAC\
+Set-Location HKCU:\AppEvents\Schemes
+
+New-Item -path .\Names -Name .LessAnnyoing -Value "Less Annoying"
+
+Get-ChildItem .\Apps |
+ForEach-Object { Get-ChildItem $_.pspath } | ForEach-Object { Copy-Item -Path ($_.pspath + "\.default") -Destination ($_.pspath + "\.LessAnnyoing") } 
+
+
+$keys = @("WindowsUAC")
+$profiles = @(".LessAnnyoing", ".Current")
+for ($i=0; $i -lt $keys.length; $i++) {
+	for ($j=0; $j -lt $profiles.length; $j++) {
+		Set-ItemProperty -Path (".\Apps\.Default\" + $keys[$i] + "\" + $profiles[$j]) -Name "(Default)" -Value ""
+	}
+}
+
+Pop-Location
+
+##################################################################################################################
+# install packages
+##################################################################################################################
 
 cinst chocolatey
 cinst chocolateygui
