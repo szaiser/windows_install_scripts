@@ -37,15 +37,19 @@ Pop-Location
 cinst chocolatey
 cinst chocolateygui
 cinst boxstarter
+cinst dropbox
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
 cinst googlechrome
 cinst 7zip.install
 #cinst git.install
-#cinst winscp.install 
+#cinst winscp.install
+cinst keepass
 #cinst tortoisehg 
+cinst kitty.portable 
 cinst teamviewer
+cinst virtualbox
 cinst windirstat
 cinst consolez
 cinst foxitreader 
@@ -66,6 +70,7 @@ cinst sysinternals
 #cinst gimp
 #cinst steam
 #cinst spotify
+#cinst nmap #network scanner
 
 #Alle installierbaren apps deinstallieren
 Get-AppxPackage -AllUsers | Remove-AppxPackage
