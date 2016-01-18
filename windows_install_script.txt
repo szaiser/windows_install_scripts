@@ -63,6 +63,7 @@ cinst skype
 cinst sysinternals
 #cinst pycharm-community
 #cinst canopy
+#cinst miktex
 
 #cinst zotero-standalone 
 #cinst thunderbird
@@ -71,6 +72,7 @@ cinst sysinternals
 #cinst steam
 #cinst spotify
 #cinst nmap #network scanner
+#cinst procmon 
 
 #Alle installierbaren apps deinstallieren
 Get-AppxPackage -AllUsers | Remove-AppxPackage
