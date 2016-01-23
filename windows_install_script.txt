@@ -38,6 +38,7 @@ cinst chocolatey
 cinst chocolateygui
 cinst boxstarter
 cinst dropbox
+cinst geforce-experience 
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
