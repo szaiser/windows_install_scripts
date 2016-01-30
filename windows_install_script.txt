@@ -14,12 +14,15 @@ Push-Location
 
 Set-Location HKCU:\AppEvents\Schemes
 
+#add sound profile Less Annyoing
 New-Item -path .\Names -Name .LessAnnyoing -Value "Less Annoying"
+Set-ItemProperty -Path ".\" -Name "(Default)" -Value ".LessAnnyoing"
 
+#add .LessAnnyoing to each sound event
 Get-ChildItem .\Apps |
 ForEach-Object { Get-ChildItem $_.pspath } | ForEach-Object { Copy-Item -Path ($_.pspath + "\.default") -Destination ($_.pspath + "\.LessAnnyoing") } 
 
-
+#change sounds for events  $keys in all profiles in $profiles.
 $keys = @("WindowsUAC")
 $profiles = @(".LessAnnyoing", ".Current")
 for ($i=0; $i -lt $keys.length; $i++) {
