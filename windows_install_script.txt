@@ -68,6 +68,7 @@ cinst irfanview
 cinst lockhunter 
 cinst skype
 cinst sysinternals
+cinst rdcman 
 #cinst pycharm-community
 #cinst canopy
 #cinst miktex
