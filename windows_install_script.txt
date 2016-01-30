@@ -28,6 +28,8 @@ for ($i=0; $i -lt $keys.length; $i++) {
 	}
 }
 
+#Set-ItemProperty -Path  -Name Start -Value 4 
+
 Pop-Location
 
 ##################################################################################################################
@@ -39,6 +41,7 @@ cinst chocolateygui
 cinst boxstarter
 cinst dropbox
 cinst geforce-experience 
+cinst geforce-game-ready-driver 
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
