@@ -49,6 +49,7 @@ cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
 cinst googlechrome
+cinst javaruntime 
 cinst 7zip.install
 #cinst git.install
 #cinst winscp.install
