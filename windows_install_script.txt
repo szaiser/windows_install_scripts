@@ -1,39 +1,39 @@
 Install-WindowsUpdate -Full
 
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
-
-Enable-RemoteDesktop
-
+#Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPa#thInTitleBar
+#
+#Enable-RemoteDesktop
+#
 #not sure if right way of doing it.
 #Set-ItemProperty -Path REG:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Beep\ -Name Start -Value 4 
-
+#
 ##################################################################################################################
 # partly Disable windows sounds
 ##################################################################################################################
-Push-Location
-
-Set-Location HKCU:\AppEvents\Schemes
-
+#Push-Location
+#
+#Set-Location HKCU:\AppEvents\Schemes
+#
 #add sound profile Less Annyoing
 New-Item -path .\Names -Name .LessAnnyoing -Value "Less Annoying"
-Set-ItemProperty -Path ".\" -Name "(Default)" -Value ".LessAnnyoing"
-
+#Set-ItemProperty -Path ".\" -Name "(Default)" -Value ".LessAnnyoing"
+#
 #add .LessAnnyoing to each sound event
-Get-ChildItem .\Apps |
-ForEach-Object { Get-ChildItem $_.pspath } | ForEach-Object { Copy-Item -Path ($_.pspath + "\.default") -Destination ($_.pspath + "\.LessAnnyoing") } 
-
+#Get-ChildItem .\Apps |
+#ForEach-Object { Get-ChildItem $_.pspath } | ForEach-Object { Copy-Item -Path ($_.pspath + "\.default") -Destination ($_.pspath + "\#.LessAnnyoing") } 
+#
 #change sounds for events  $keys in all profiles in $profiles.
-$keys = @("WindowsUAC")
-$profiles = @(".LessAnnyoing", ".Current")
-for ($i=0; $i -lt $keys.length; $i++) {
-	for ($j=0; $j -lt $profiles.length; $j++) {
-		Set-ItemProperty -Path (".\Apps\.Default\" + $keys[$i] + "\" + $profiles[$j]) -Name "(Default)" -Value ""
-	}
-}
-
+#$keys = @("WindowsUAC")
+#$profiles = @(".LessAnnyoing", ".Current")
+#for ($i=0; $i -lt $keys.length; $i++) {
+#	for ($j=0; $j -lt $profiles.length; $j++) {
+#		Set-ItemProperty -Path (".\Apps\.Default\" + $keys[$i] + "\" + $profiles[$j]) -Name "(Default)" -Value ""
+#	}
+#}
+#
 #Set-ItemProperty -Path  -Name Start -Value 4 
-
-Pop-Location
+#
+#Pop-Location
 
 ##################################################################################################################
 # install packages
@@ -54,7 +54,7 @@ cinst 7zip.install
 #cinst git.install
 #cinst winscp.install
 cinst keepass
-#cinst tortoisehg 
+cinst tortoisehg 
 cinst kitty.portable 
 cinst teamviewer
 cinst virtualbox
@@ -70,24 +70,23 @@ cinst lockhunter
 cinst skype
 cinst sysinternals
 cinst rdcman 
-#cinst pycharm-community
-#cinst canopy
-#cinst miktex
+cinst pycharm-community
+cinst canopy
+cinst miktex
 
-#cinst zotero-standalone 
-#cinst thunderbird
-#cinst install kitty.portable 
-#cinst gimp
-#cinst steam
-#cinst spotify
-#cinst nmap #network scanner
-#cinst procmon 
+cinst zotero-standalone 
+cinst thunderbird
+cinst install kitty.portable 
+cinst gimp
+cinst steam
+cinst spotify
+cinst nmap #network scanner
+cinst procmon 
 
 #Alle installierbaren apps deinstallieren
 Get-AppxPackage -AllUsers | Remove-AppxPackage
 
 #App nach Name deinstallieren
-
 #Get-AppxPackage *3d* | Remove-AppxPackage
 #Get-AppxPackage *camera* | Remove-AppxPackage
 #Get-AppxPackage *communi* | Remove-AppxPackage
