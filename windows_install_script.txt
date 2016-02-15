@@ -45,6 +45,8 @@ cinst boxstarter
 cinst dropbox
 cinst geforce-experience 
 cinst geforce-game-ready-driver 
+cinst logitechgaming 
+cinst multicommander
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst firefox
