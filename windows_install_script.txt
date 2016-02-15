@@ -1,9 +1,11 @@
 Install-WindowsUpdate -Full
 
-#Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPa#thInTitleBar
-#
-#Enable-RemoteDesktop
-#
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPa#thInTitleBar
+
+Enable-RemoteDesktop
+
+Disable-ComputerRestore "C:\"
+
 #not sure if right way of doing it.
 #Set-ItemProperty -Path REG:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Beep\ -Name Start -Value 4 
 #
@@ -49,6 +51,7 @@ cinst logitechgaming
 cinst multicommander
 cinst flashplayerplugin
 cinst notepadplusplus.install 
+cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
 cinst firefox
 cinst googlechrome
 cinst javaruntime 
