@@ -1,10 +1,17 @@
+Set-ExecutionPolicy Unrestricted -Force
+
 Install-WindowsUpdate -Full
 
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPa#thInTitleBar
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
 Enable-RemoteDesktop
 
 Disable-ComputerRestore "C:\"
+
+New-ItemProperty 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU' -name 'NoAutoRebootWithLoggedOnUsers' -value '1' -propertyType "DWord" -force
+New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer' -name 'NoTaskGrouping' -value '1' -propertyType "DWord" -force
+
+regedit /s "D:\Dropbox\Portable_Programme\Scripts\consolez_contextmenue.reg"
 
 #not sure if right way of doing it.
 #Set-ItemProperty -Path REG:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Beep\ -Name Start -Value 4 
