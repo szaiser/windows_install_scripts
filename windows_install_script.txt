@@ -96,6 +96,7 @@ cinst zotero-standalone
 cinst thunderbird
 cinst gimp
 cinst steam
+cinst uplay
 choco install uplay 
 cinst spotify
 cinst nmap #network scanner
@@ -103,5 +104,24 @@ cinst procmon
 
 #Alle installierbaren apps deinstallieren
 Get-AppxPackage -AllUsers | Remove-AppxPackage
+
+# Download the file to a specific location
+$clnt = new-object System.Net.WebClient
+$url = "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip"
+$file = "$env:USERPROFILE\Desktop\steamcmd.zip"
+$clnt.DownloadFile($url,$file)
+
+# Unzip the file to specified location
+$shell_app=new-object -com shell.application 
+$zip_file = $shell_app.namespace($file) 
+$destination = $shell_app.namespace("C:\Program Files (x86)\Steam") 
+$destination.Copyhere($zip_file.items())
+
+$WshShell = New-Object -comObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\update_steam_links_for_windows_search.lnk")
+$Shortcut.TargetPath = "$env:USERPROFILE\system32\WindowsPowerShell\v1.0\powershell.exe" -File "D:\Dropbox\Portable_Programme\Scripts\Powershell\Windows_Search_steam_links\update_links.ps1"
+$Shortcut.WorkingDirectory  = "C:\Program Files (x86)\Steam\"
+$Shortcut.Save()
+
 
 cinst origin
