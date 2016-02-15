@@ -55,9 +55,9 @@ cinst javaruntime
 cinst 7zip.install
 #cinst git.install
 #cinst winscp.install
-cinst keepass
+#cinst keepass
+#cinst kitty.portable 
 cinst tortoisehg 
-cinst kitty.portable 
 cinst teamviewer
 cinst virtualbox
 cinst windirstat
@@ -67,7 +67,7 @@ cinst sumatrapdf.install
 cinst pdfxchangeviewer
 cinst autohotkey.install 
 cinst irfanview 
-#cinst inkscape
+cinst inkscape
 cinst lockhunter 
 cinst skype
 cinst sysinternals
@@ -78,7 +78,6 @@ cinst miktex
 
 cinst zotero-standalone 
 cinst thunderbird
-cinst install kitty.portable 
 cinst gimp
 cinst steam
 cinst spotify
