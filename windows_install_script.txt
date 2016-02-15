@@ -83,6 +83,7 @@ cinst zotero-standalone
 cinst thunderbird
 cinst gimp
 cinst steam
+choco install uplay 
 cinst spotify
 cinst nmap #network scanner
 cinst procmon 
@@ -90,13 +91,4 @@ cinst procmon
 #Alle installierbaren apps deinstallieren
 Get-AppxPackage -AllUsers | Remove-AppxPackage
 
-#App nach Name deinstallieren
-#Get-AppxPackage *3d* | Remove-AppxPackage
-#Get-AppxPackage *camera* | Remove-AppxPackage
-#Get-AppxPackage *communi* | Remove-AppxPackage
-#Get-AppxPackage *bing* | Remove-AppxPackage
-#Get-AppxPackage *zune* | Remove-AppxPackage
-#Get-AppxPackage *phone* | Remove-AppxPackage
-#Get-AppxPackage *photo* | Remove-AppxPackage
-#Get-AppxPackage *solit* | Remove-AppxPackage
-#Get-AppxPackage *soundrec* | Remove-AppxPackage
+cinst origin
