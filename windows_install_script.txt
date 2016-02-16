@@ -117,11 +117,7 @@ $zip_file = $shell_app.namespace($file)
 $destination = $shell_app.namespace("C:\Program Files (x86)\Steam") 
 $destination.Copyhere($zip_file.items())
 
-$WshShell = New-Object -comObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\update_steam_links_for_windows_search.lnk")
-$Shortcut.TargetPath = "$env:USERPROFILE\system32\WindowsPowerShell\v1.0\powershell.exe" -File "D:\Dropbox\Portable_Programme\Scripts\Powershell\Windows_Search_steam_links\update_links.ps1"
-$Shortcut.WorkingDirectory  = "C:\Program Files (x86)\Steam\"
-$Shortcut.Save()
-
+Copy-Item "D:\Dropbox\Portable_Programme\Scripts\Powershell\Windows_Search_steam_links\update_steam_links_for_windows_search.ps1" "C:\Program Files (x86)\Steam\"
+Copy-Item "D:\Dropbox\Portable_Programme\Scripts\Powershell\Windows_Search_steam_links\runit.bat" "C:\Users\Temporaernutzer\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 cinst origin
