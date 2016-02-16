@@ -68,6 +68,7 @@ cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad+
 cinst firefox
 cinst googlechrome
 cinst javaruntime 
+cinst potplayer
 cinst 7zip.install
 #cinst git.install
 #cinst winscp.install
