@@ -92,6 +92,7 @@ cinst rdcman
 cinst pycharm-community
 cinst canopy
 cinst miktex
+cinst texniccenter
 
 cinst zotero-standalone 
 cinst thunderbird
