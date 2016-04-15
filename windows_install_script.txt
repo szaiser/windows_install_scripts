@@ -81,7 +81,7 @@ cinst windirstat
 #cinst consolez
 cinst foxitreader 
 cinst sumatrapdf.install
-cinst pdfxchangeviewer
+#cinst pdfxchangeviewer
 cinst autohotkey.install 
 cinst irfanview 
 cinst inkscape
