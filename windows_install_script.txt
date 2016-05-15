@@ -70,7 +70,7 @@ cinst googlechrome
 cinst javaruntime 
 cinst potplayer
 cinst 7zip.install
-#cinst git.install
+cinst git
 #cinst winscp.install
 #cinst keepass
 #cinst kitty.portable 
