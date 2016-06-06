@@ -80,12 +80,14 @@ cinst virtualbox
 cinst windirstat
 #cinst consolez
 cinst foxitreader 
+cinst pdfcreator
 cinst sumatrapdf.install
 #cinst pdfxchangeviewer
 cinst autohotkey.install 
 cinst irfanview 
 cinst inkscape
 cinst blender
+cinst paint.net
 cinst lockhunter 
 cinst skype
 cinst sysinternals
@@ -93,8 +95,10 @@ cinst rdcman
 cinst pycharm-community
 cinst canopy
 cinst miktex
+cinst ghostscript.app
+cinst imagemagick.app
 cinst texniccenter
-
+cinst clink
 #cinst zotero-standalone 
 #cinst thunderbird
 cinst gimp
