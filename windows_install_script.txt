@@ -91,6 +91,7 @@ cinst paint.net
 cinst lockhunter 
 cinst skype
 cinst sysinternals
+cinst everything
 cinst rdcman 
 cinst pycharm-community
 cinst canopy
@@ -109,8 +110,15 @@ cinst spotify
 #cinst nmap #network scanner
 cinst procmon 
 
+$A = New-ScheduledTaskAction –Execute "C:\Program Files\Everything\Everything.exe" -Argument "-startup" 
+$T = New-ScheduledTaskTrigger -AtLogon
+$UserId = "$([Environment]::MachineName)\$([Environment]::UserName)"
+$Principal = New-ScheduledTaskPrincipal -UserId $UserId -RunLevel Highest
+$D = New-ScheduledTask -Action $A -Trigger $T -Principal $Principal
+Register-ScheduledTask StartEverything -InputObject $D
+
 #Alle installierbaren apps deinstallieren
-Get-AppxPackage -AllUsers | Remove-AppxPackage
+#Get-AppxPackage -AllUsers | Remove-AppxPackage
 
 # Download the file to a specific location
 #$clnt = new-object System.Net.WebClient
