@@ -58,6 +58,7 @@ cinst chocolatey
 cinst chocolateygui
 cinst boxstarter
 cinst dropbox
+#cinst procexp
 #cinst geforce-experience 
 #cinst geforce-game-ready-driver 
 #cinst logitechgaming 
