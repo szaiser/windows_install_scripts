@@ -13,11 +13,11 @@ New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explo
 
 #regedit /s "D:\Dropbox\Portable_Programme\Scripts\consolez_contextmenue.reg"
 
-$WshShell = New-Object -comObject WScript.Shell
-$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\large-script.lnk")
-$Shortcut.TargetPath = "D:\Dropbox\Portable_Programme\Scripts\MISC\Large-Script\Large-Script.ahk"
-$Shortcut.WorkingDirectory  = "D:\Dropbox\Portable_Programme\Scripts\MISC\Large-Script\"
-$Shortcut.Save()
+#$WshShell = New-Object -comObject WScript.Shell
+#$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\large-script.lnk")
+#$Shortcut.TargetPath = "D:\Dropbox\Portable_Programme\Scripts\MISC\Large-Script\Large-Script.ahk"
+#$Shortcut.WorkingDirectory  = "D:\Dropbox\Portable_Programme\Scripts\MISC\Large-Script\"
+#$Shortcut.Save()
 
 #not sure if right way of doing it.
 #Set-ItemProperty -Path REG:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Beep\ -Name Start -Value 4 
@@ -58,11 +58,11 @@ cinst chocolatey
 cinst chocolateygui
 cinst boxstarter
 cinst dropbox
-#cinst procexp
-#cinst geforce-experience 
-#cinst geforce-game-ready-driver 
+cinst procexp
+cinst geforce-experience 
+cinst geforce-game-ready-driver 
 #cinst logitechgaming 
-cinst multicommander
+#cinst multicommander
 cinst flashplayerplugin
 cinst notepadplusplus.install 
 cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
@@ -73,8 +73,8 @@ cinst potplayer
 cinst 7zip.install
 cinst git
 #cinst winscp.install
-#cinst keepass
-#cinst kitty.portable 
+cinst keepass
+cinst kitty.portable 
 cinst tortoisehg 
 cinst teamviewer
 cinst virtualbox
@@ -93,7 +93,7 @@ cinst lockhunter
 cinst skype
 cinst sysinternals
 cinst everything
-cinst rdcman 
+#cinst rdcman 
 cinst pycharm-community
 cinst canopy
 cinst miktex
@@ -101,12 +101,11 @@ cinst ghostscript.app
 cinst imagemagick.app
 cinst texniccenter
 cinst clink
-#cinst zotero-standalone 
+cinst zotero-standalone 
 #cinst thunderbird
 cinst gimp
 #cinst steam
-#cinst uplay
-#choco install uplay 
+#cinst uplay 
 cinst spotify
 #cinst nmap #network scanner
 cinst procmon 
