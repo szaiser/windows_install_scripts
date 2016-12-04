@@ -54,8 +54,8 @@ New-Item -path .\Names -Name .LessAnnyoing -Value "Less Annoying"
 # install packages
 ##################################################################################################################
 
-#cinst chocolatey
-#cinst chocolateygui
+cinst chocolatey
+cinst chocolateygui
 cinst boxstarter
 cinst dropbox
 cinst procexp
