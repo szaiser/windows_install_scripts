@@ -1,4 +1,4 @@
-Set-ExecutionPolicy Unrestricted -Force
+#Set-ExecutionPolicy Unrestricted -Force
 
 Install-WindowsUpdate -Full
 
