@@ -11,104 +11,65 @@ Disable-ComputerRestore "C:\"
 New-ItemProperty 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU' -name 'NoAutoRebootWithLoggedOnUsers' -value '1' -propertyType "DWord" -force
 New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer' -name 'NoTaskGrouping' -value '1' -propertyType "DWord" -force
 
-#regedit /s "D:\Dropbox\Portable_Programme\Scripts\consolez_contextmenue.reg"
-
-#$WshShell = New-Object -comObject WScript.Shell
-#$Shortcut = $WshShell.CreateShortcut("$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\large-script.lnk")
-#$Shortcut.TargetPath = "D:\Dropbox\Portable_Programme\Scripts\MISC\Large-Script\Large-Script.ahk"
-#$Shortcut.WorkingDirectory  = "D:\Dropbox\Portable_Programme\Scripts\MISC\Large-Script\"
-#$Shortcut.Save()
-
-#not sure if right way of doing it.
-#Set-ItemProperty -Path REG:\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Beep\ -Name Start -Value 4 
-#
-##################################################################################################################
-# partly Disable windows sounds
-##################################################################################################################
-#Push-Location
-#
-#Set-Location HKCU:\AppEvents\Schemes
-#
-#add sound profile Less Annyoing
-New-Item -path .\Names -Name .LessAnnyoing -Value "Less Annoying"
-#Set-ItemProperty -Path ".\" -Name "(Default)" -Value ".LessAnnyoing"
-#
-#add .LessAnnyoing to each sound event
-#Get-ChildItem .\Apps |
-#ForEach-Object { Get-ChildItem $_.pspath } | ForEach-Object { Copy-Item -Path ($_.pspath + "\.default") -Destination ($_.pspath + ".LessAnnyoing") } 
-#
-#change sounds for events  $keys in all profiles in $profiles.
-#$keys = @("WindowsUAC")
-#$profiles = @(".LessAnnyoing", ".Current")
-#for ($i=0; $i -lt $keys.length; $i++) {
-#	for ($j=0; $j -lt $profiles.length; $j++) {
-#		Set-ItemProperty -Path (".\Apps\.Default\" + $keys[$i] + "\" + $profiles[$j]) -Name "(Default)" -Value ""
-#	}
-#}
-#
-#Set-ItemProperty -Path  -Name Start -Value 4 
-#
-#Pop-Location
-
 ##################################################################################################################
 # install packages
 ##################################################################################################################
 
-cinst chocolatey
-cinst chocolateygui
-cinst boxstarter
-cinst dropbox
-cinst procexp
-cinst geforce-experience 
-cinst geforce-game-ready-driver 
-#cinst logitechgaming 
-#cinst multicommander
-cinst flashplayerplugin
-cinst notepadplusplus.install 
-cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
-cinst firefox
-cinst googlechrome
-cinst javaruntime 
-cinst potplayer
-cinst 7zip.install
-cinst git
-#cinst winscp.install
-cinst keepass
-cinst kitty.portable 
-cinst tortoisehg 
-cinst teamviewer
-cinst virtualbox
-cinst windirstat
-#cinst consolez
-cinst foxitreader 
-cinst pdfcreator
-cinst sumatrapdf.install
-#cinst pdfxchangeviewer
-cinst autohotkey.install 
-cinst irfanview 
-cinst inkscape
-cinst blender
-cinst paint.net
-cinst lockhunter 
-cinst skype
-cinst sysinternals
-cinst everything
-#cinst rdcman 
-cinst pycharm-community
-cinst canopy
-cinst miktex
-cinst ghostscript.app
-cinst imagemagick.app
-cinst texniccenter
-cinst clink
-cinst zotero-standalone 
-#cinst thunderbird
-cinst gimp
-#cinst steam
-#cinst uplay 
-cinst spotify
-#cinst nmap #network scanner
-cinst procmon 
+cinst chocolatey --allow-empty-checksums-secure
+cinst chocolateygui --allow-empty-checksums-secure 
+cinst boxstarter --allow-empty-checksums-secure
+cinst dropbox --allow-empty-checksums-secure
+cinst procexp --allow-empty-checksums-secure
+cinst geforce-experience --allow-empty-checksums-secure 
+cinst geforce-game-ready-driver --allow-empty-checksums-secure
+#cinst logitechgaming --allow-empty-checksums-secure 
+#cinst multicommander --allow-empty-checksums-secure
+cinst flashplayerplugin --allow-empty-checksums-secure
+cinst notepadplusplus.install --allow-empty-checksums-secure 
+cinst notepadreplacer --allow-empty-checksums-secure -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
+cinst firefox --allow-empty-checksums-secure
+cinst googlechrome --allow-empty-checksums-secure
+cinst javaruntime  --allow-empty-checksums-secure
+cinst potplayer --allow-empty-checksums-secure
+cinst 7zip.install --allow-empty-checksums-secure
+cinst git --allow-empty-checksums-secure
+#cinst winscp.install --allow-empty-checksums-secure
+cinst keepass --allow-empty-checksums-secure
+cinst kitty.portable  --allow-empty-checksums-secure
+cinst tortoisehg  --allow-empty-checksums-secure
+cinst teamviewer --allow-empty-checksums-secure
+cinst virtualbox --allow-empty-checksums-secure
+cinst windirstat --allow-empty-checksums-secure
+#cinst consolez --allow-empty-checksums-secure
+cinst foxitreader --allow-empty-checksums-secure 
+cinst pdfcreator --allow-empty-checksums-secure
+cinst sumatrapdf.install --allow-empty-checksums-secure
+#cinst pdfxchangeviewer --allow-empty-checksums-secure
+cinst autohotkey.install  --allow-empty-checksums-secure
+cinst irfanview  --allow-empty-checksums-secure
+cinst inkscape --allow-empty-checksums-secure
+cinst blender --allow-empty-checksums-secure
+cinst paint.net --allow-empty-checksums-secure
+cinst lockhunter  --allow-empty-checksums-secure
+cinst skype --allow-empty-checksums-secure
+cinst sysinternals --allow-empty-checksums-secure
+cinst everything --allow-empty-checksums-secure
+#cinst rdcman  --allow-empty-checksums-secure
+cinst pycharm-community --allow-empty-checksums-secure
+cinst canopy --allow-empty-checksums-secure
+cinst miktex --allow-empty-checksums-secure
+cinst ghostscript.app --allow-empty-checksums-secure
+cinst imagemagick.app --allow-empty-checksums-secure
+cinst texniccenter --allow-empty-checksums-secure
+cinst clink --allow-empty-checksums-secure
+cinst zotero-standalone  --allow-empty-checksums-secure
+#cinst thunderbird --allow-empty-checksums-secure
+cinst gimp --allow-empty-checksums-secure
+#cinst steam --allow-empty-checksums-secure
+#cinst uplay  --allow-empty-checksums-secure
+cinst spotify --allow-empty-checksums-secure
+#cinst nmap #network scanner --allow-empty-checksums-secure
+cinst procmon  --allow-empty-checksums-secure
 
 $A = New-ScheduledTaskAction –Execute "C:\Program Files\Everything\Everything.exe" -Argument "-startup" 
 $T = New-ScheduledTaskTrigger -AtLogon
@@ -117,22 +78,4 @@ $Principal = New-ScheduledTaskPrincipal -UserId $UserId -RunLevel Highest
 $D = New-ScheduledTask -Action $A -Trigger $T -Principal $Principal
 Register-ScheduledTask StartEverything -InputObject $D
 
-#Alle installierbaren apps deinstallieren
-#Get-AppxPackage -AllUsers | Remove-AppxPackage
-
-# Download the file to a specific location
-#$clnt = new-object System.Net.WebClient
-#$url = "https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip"
-#$file = "$env:USERPROFILE\Desktop\steamcmd.zip"
-#$clnt.DownloadFile($url,$file)
-
-# Unzip the file to specified location
-#$shell_app=new-object -com shell.application 
-#$zip_file = $shell_app.namespace($file) 
-#$destination = $shell_app.namespace("C:\Program Files (x86)\Steam") 
-#$destination.Copyhere($zip_file.items())
-
-#Copy-Item "D:\Dropbox\Portable_Programme\Scripts\Powershell\Windows_Search_steam_links\update_steam_links_for_windows_search.ps1" "C#:\Program Files (x86)\Steam\"
-#Copy-Item "D:\Dropbox\Portable_Programme\Scripts\Powershell\Windows_Search_steam_links\runit.bat" "C:\Users\Temporaernutzer\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-
-#cinst origin
+#cinst origin --allow-empty-checksums-secure
