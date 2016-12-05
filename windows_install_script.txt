@@ -8,7 +8,7 @@ Enable-RemoteDesktop
 
 Disable-ComputerRestore "C:\"
 
-New-ItemProperty 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU' -name 'NoAutoRebootWithLoggedOnUsers' -value '1' -propertyType "DWord"b -force
+New-ItemProperty 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU' -name 'NoAutoRebootWithLoggedOnUsers' -value '1' -propertyType "DWord" -force
 New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer' -name 'NoTaskGrouping' -value '1' -propertyType "DWord" -force
 
 #regedit /s "D:\Dropbox\Portable_Programme\Scripts\consolez_contextmenue.reg"
