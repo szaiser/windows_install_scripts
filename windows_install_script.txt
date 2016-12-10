@@ -43,6 +43,7 @@ cinst windirstat --allow-empty-checksums-secure
 #cinst consolez --allow-empty-checksums-secure
 cinst foxitreader --allow-empty-checksums-secure 
 cinst pdfcreator --allow-empty-checksums-secure
+cinst imagemagick --allow-empty-checksums-secure
 cinst sumatrapdf.install --allow-empty-checksums-secure
 #cinst pdfxchangeviewer --allow-empty-checksums-secure
 cinst autohotkey.install  --allow-empty-checksums-secure
