@@ -5,6 +5,7 @@ cinst firefox --allow-empty-checksums-secure
 cinst googlechrome --allow-empty-checksums-secure
 cinst javaruntime  --allow-empty-checksums-secure
 cinst potplayer --allow-empty-checksums-secure
+cinst windirstat --allow-empty-checksums-secure
 cinst 7zip.install --allow-empty-checksums-secure
 cinst git --allow-empty-checksums-secure
 cinst keepass --allow-empty-checksums-secure
