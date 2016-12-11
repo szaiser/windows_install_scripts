@@ -1,20 +1,3 @@
-#Set-ExecutionPolicy Unrestricted -Force
-
-Install-WindowsUpdate -Full
-
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar
-
-Enable-RemoteDesktop
-
-Disable-ComputerRestore "C:\"
-
-New-ItemProperty 'HKLM:\Software\Policies\Microsoft\Windows\WindowsUpdate\AU' -name 'NoAutoRebootWithLoggedOnUsers' -value '1' -propertyType "DWord" -force
-New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer' -name 'NoTaskGrouping' -value '1' -propertyType "DWord" -force
-
-##################################################################################################################
-# install packages
-##################################################################################################################
-
 cinst chocolatey --allow-empty-checksums-secure
 cinst chocolateygui --allow-empty-checksums-secure 
 cinst boxstarter --allow-empty-checksums-secure
@@ -35,7 +18,6 @@ cinst foxitreader --allow-empty-checksums-secure
 cinst pdfcreator --allow-empty-checksums-secure
 cinst imagemagick --allow-empty-checksums-secure
 cinst sumatrapdf.install --allow-empty-checksums-secure
-#cinst pdfxchangeviewer --allow-empty-checksums-secure
 cinst autohotkey.install  --allow-empty-checksums-secure
 cinst irfanview  --allow-empty-checksums-secure
 cinst inkscape --allow-empty-checksums-secure
@@ -49,10 +31,3 @@ cinst clink --allow-empty-checksums-secure
 cinst gimp --allow-empty-checksums-secure
 cinst spotify --allow-empty-checksums-secure
 cinst procmon  --allow-empty-checksums-secure
-
-$A = New-ScheduledTaskAction –Execute "C:\Program Files\Everything\Everything.exe" -Argument "-startup" 
-$T = New-ScheduledTaskTrigger -AtLogon
-$UserId = "$([Environment]::MachineName)\$([Environment]::UserName)"
-$Principal = New-ScheduledTaskPrincipal -UserId $UserId -RunLevel Highest
-$D = New-ScheduledTask -Action $A -Trigger $T -Principal $Principal
-Register-ScheduledTask StartEverything -InputObject $D
