@@ -69,6 +69,7 @@ cinst gimp --allow-empty-checksums-secure
 #cinst steam --allow-empty-checksums-secure
 #cinst uplay  --allow-empty-checksums-secure
 cinst spotify --allow-empty-checksums-secure
+cinst f.lux
 #cinst nmap #network scanner --allow-empty-checksums-secure
 cinst procmon  --allow-empty-checksums-secure
 
