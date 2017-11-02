@@ -56,7 +56,7 @@ cinst skype --allow-empty-checksums-secure
 cinst sysinternals --allow-empty-checksums-secure
 cinst everything --allow-empty-checksums-secure
 #cinst rdcman  --allow-empty-checksums-secure
-cinst pycharm-community --allow-empty-checksums-secure
+cinst jetbrainstoolbox --allow-empty-checksums-secure
 cinst canopy --allow-empty-checksums-secure
 cinst miktex --allow-empty-checksums-secure
 cinst ghostscript.app --allow-empty-checksums-secure
