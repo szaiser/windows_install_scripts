@@ -28,6 +28,7 @@ cinst flashplayerplugin --allow-empty-checksums-secure
 cinst notepadplusplus.install --allow-empty-checksums-secure 
 cinst notepadreplacer --allow-empty-checksums-secure -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
 cinst firefox --allow-empty-checksums-secure
+cinst strawberryperl 
 cinst googlechrome --allow-empty-checksums-secure
 cinst javaruntime  --allow-empty-checksums-secure
 cinst potplayer --allow-empty-checksums-secure
