@@ -24,6 +24,7 @@ cinst geforce-experience --allow-empty-checksums-secure
 cinst geforce-game-ready-driver --allow-empty-checksums-secure
 #cinst logitechgaming --allow-empty-checksums-secure 
 #cinst multicommander --allow-empty-checksums-secure
+cinst keypirinha
 cinst flashplayerplugin --allow-empty-checksums-secure
 cinst notepadplusplus.install --allow-empty-checksums-secure 
 cinst notepadreplacer --allow-empty-checksums-secure -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
