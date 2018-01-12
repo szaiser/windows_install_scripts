@@ -15,65 +15,66 @@ New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explo
 # install packages
 ##################################################################################################################
 
-cinst chocolatey --allow-empty-checksums-secure
-cinst chocolateygui --allow-empty-checksums-secure 
-cinst boxstarter --allow-empty-checksums-secure
-cinst dropbox --allow-empty-checksums-secure
-cinst procexp --allow-empty-checksums-secure
-cinst geforce-experience --allow-empty-checksums-secure 
-cinst geforce-game-ready-driver --allow-empty-checksums-secure
-#cinst logitechgaming --allow-empty-checksums-secure 
-#cinst multicommander --allow-empty-checksums-secure
+cinst chocolatey
+cinst chocolateygui 
+cinst boxstarter
+cinst powershell 
+cinst dropbox
+cinst procexp
+cinst geforce-experience 
+cinst geforce-game-ready-driver
+#cinst logitechgaming 
+#cinst multicommander
 cinst keypirinha
-cinst flashplayerplugin --allow-empty-checksums-secure
-cinst notepadplusplus.install --allow-empty-checksums-secure 
-cinst notepadreplacer --allow-empty-checksums-secure -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
-cinst firefox --allow-empty-checksums-secure
+cinst flashplayerplugin
+cinst notepadplusplus.install 
+# cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
+cinst firefox
 cinst strawberryperl 
-cinst googlechrome --allow-empty-checksums-secure
-cinst javaruntime  --allow-empty-checksums-secure
-cinst potplayer --allow-empty-checksums-secure
-cinst 7zip.install --allow-empty-checksums-secure
-cinst git --allow-empty-checksums-secure
-#cinst winscp.install --allow-empty-checksums-secure
-cinst keepass --allow-empty-checksums-secure
-cinst kitty.portable  --allow-empty-checksums-secure
-cinst tortoisehg  --allow-empty-checksums-secure
-cinst teamviewer --allow-empty-checksums-secure
-cinst virtualbox --allow-empty-checksums-secure
-cinst windirstat --allow-empty-checksums-secure
-#cinst consolez --allow-empty-checksums-secure
-cinst foxitreader --allow-empty-checksums-secure 
-cinst pdfcreator --allow-empty-checksums-secure
-cinst imagemagick --allow-empty-checksums-secure
-cinst sumatrapdf.install --allow-empty-checksums-secure
-#cinst pdfxchangeviewer --allow-empty-checksums-secure
-cinst autohotkey.install  --allow-empty-checksums-secure
-cinst irfanview  --allow-empty-checksums-secure
-cinst inkscape --allow-empty-checksums-secure
-cinst blender --allow-empty-checksums-secure
-cinst paint.net --allow-empty-checksums-secure
-cinst lockhunter  --allow-empty-checksums-secure
-cinst skype --allow-empty-checksums-secure
-cinst sysinternals --allow-empty-checksums-secure
-cinst everything --allow-empty-checksums-secure
-#cinst rdcman  --allow-empty-checksums-secure
-cinst jetbrainstoolbox --allow-empty-checksums-secure
-cinst canopy --allow-empty-checksums-secure
-cinst miktex --allow-empty-checksums-secure
-cinst ghostscript.app --allow-empty-checksums-secure
-cinst imagemagick.app --allow-empty-checksums-secure
-cinst texniccenter --allow-empty-checksums-secure
-cinst clink --allow-empty-checksums-secure
-cinst zotero-standalone  --allow-empty-checksums-secure
-#cinst thunderbird --allow-empty-checksums-secure
-cinst gimp --allow-empty-checksums-secure
-#cinst steam --allow-empty-checksums-secure
-#cinst uplay  --allow-empty-checksums-secure
-cinst spotify --allow-empty-checksums-secure
+cinst googlechrome
+cinst javaruntime 
+cinst potplayer
+cinst 7zip.install
+cinst git
+#cinst winscp.install
+cinst keepass
+cinst kitty.portable 
+cinst tortoisehg 
+cinst teamviewer
+cinst virtualbox
+cinst windirstat
+#cinst consolez
+cinst foxitreader 
+cinst pdfcreator
+cinst imagemagick
+cinst sumatrapdf.install
+#cinst pdfxchangeviewer
+cinst autohotkey.install 
+cinst irfanview 
+cinst inkscape
+cinst blender
+cinst paint.net
+cinst lockhunter 
+cinst skype
+cinst sysinternals
+cinst everything
+#cinst rdcman 
+cinst jetbrainstoolbox
+cinst canopy
+cinst miktex
+cinst ghostscript.app
+cinst imagemagick.app
+cinst texniccenter
+cinst clink
+cinst zotero-standalone 
+#cinst thunderbird
+cinst gimp
+#cinst steam
+#cinst uplay 
+cinst spotify
 cinst f.lux
-#cinst nmap #network scanner --allow-empty-checksums-secure
-cinst procmon  --allow-empty-checksums-secure
+#cinst nmap #network scanner
+cinst procmon 
 
 $A = New-ScheduledTaskAction –Execute "C:\Program Files\Everything\Everything.exe" -Argument "-startup" 
 $T = New-ScheduledTaskTrigger -AtLogon
@@ -82,4 +83,4 @@ $Principal = New-ScheduledTaskPrincipal -UserId $UserId -RunLevel Highest
 $D = New-ScheduledTask -Action $A -Trigger $T -Principal $Principal
 Register-ScheduledTask StartEverything -InputObject $D
 
-#cinst origin --allow-empty-checksums-secure
+#cinst origin 
