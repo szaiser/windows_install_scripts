@@ -60,7 +60,8 @@ cinst sysinternals
 cinst everything
 #cinst rdcman 
 cinst jetbrainstoolbox
-cinst canopy
+cinst anaconda2 --params "'/InstallationType=AllUsers /RegisterPython=0 /S /D=""C:\ProgramData\Anaconda\""'"
+
 cinst miktex
 cinst ghostscript.app
 cinst imagemagick.app
