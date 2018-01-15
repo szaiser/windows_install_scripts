@@ -57,26 +57,12 @@ cinst paint.net
 cinst lockhunter 
 cinst skype
 cinst sysinternals
-cinst everything -ia="'-enable-update-notification -install-service -install-efu-association'"
-
-
-
-
-
-    /client-service - Install the "Everything" client as a service.
-    /desktop-shortcut- Install desktop shortcut.
-    /efu-association - Install EFU file association.
-    /folder-context-menu - Install folder context menus.
-    /quick-launch-shortcut - Install Quick Launch shortcut.
-    /run-on-system-startup - Install "Everything" in the system startup.
-    /service - Install and start the "Everything" service.
-    /start-menu-shortcuts - Install "Everything" shortcuts from the Start menu.
-
-
+cinst everything -params '"/service /run-on-system-startup /efu-association"'
 
 #cinst rdcman 
-cinst jetbrainstoolbox
 cinst anaconda2 ia="'/InstallationType=AllUsers /RegisterPython=0 /S /D=""C:\ProgramData\Anaconda\""'"
+cinst jetbrainstoolbox
+
 
 cinst miktex
 cinst ghostscript.app
