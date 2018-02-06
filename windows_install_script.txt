@@ -38,7 +38,7 @@ cinst 7zip.install
 cinst git
 #cinst winscp.install
 cinst keepass
-cinst kitty.portable 
+cinst kitty --package-parameters='/Portable'
 cinst tortoisehg 
 cinst teamviewer
 cinst virtualbox
