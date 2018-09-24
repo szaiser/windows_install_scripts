@@ -60,7 +60,8 @@ cinst sysinternals
 cinst everything -params '"/service /run-on-system-startup /efu-association"'
 
 #cinst rdcman 
-cinst anaconda2 ia="'/InstallationType=AllUsers /RegisterPython=0 /S /D=""C:\ProgramData\Anaconda\""'"
+#cinst anaconda3 '"/AddToPath /C:/ProgramData/Anaconda"' -y
+#cinst anaconda2 ia="'/InstallationType=AllUsers /RegisterPython=0 /S /D=""C:\ProgramData\Anaconda\""'"
 cinst jetbrainstoolbox
 
 
