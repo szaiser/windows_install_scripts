@@ -21,14 +21,13 @@ cinst boxstarter
 cinst powershell 
 cinst dropbox
 cinst procexp
-cinst geforce-experience 
-cinst geforce-game-ready-driver
+#cinst geforce-experience 
+#cinst geforce-game-ready-driver
 #cinst logitechgaming 
-#cinst multicommander
+cinst multicommander
 cinst keypirinha
-cinst flashplayerplugin
 cinst notepadplusplus.install 
-# cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"'
+# cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"' 
 cinst firefox
 cinst strawberryperl 
 cinst googlechrome
@@ -59,7 +58,6 @@ cinst skype
 cinst sysinternals
 cinst everything -params '"/service /run-on-system-startup /efu-association"'
 
-#cinst rdcman 
 cinst jetbrainstoolbox
 
 
@@ -68,13 +66,13 @@ cinst ghostscript.app
 cinst imagemagick.app
 cinst texniccenter
 cinst clink
-cinst zotero-standalone 
+#cinst zotero-standalone 
 #cinst thunderbird
-cinst gimp
+#cinst gimp
 #cinst steam
 #cinst uplay 
 cinst spotify
-cinst f.lux
+#cinst f.lux
 #cinst nmap #network scanner
 cinst procmon 
 
