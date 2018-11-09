@@ -75,12 +75,4 @@ cinst spotify
 #cinst f.lux
 #cinst nmap #network scanner
 cinst procmon 
-
-#$A = New-ScheduledTaskAction –Execute "C:\Program Files\Everything\Everything.exe" -Argument "-startup" 
-#$T = New-ScheduledTaskTrigger -AtLogon
-#$UserId = "$([Environment]::MachineName)\$([Environment]::UserName)"
-#$Principal = New-ScheduledTaskPrincipal -UserId $UserId -RunLevel Highest
-#$D = New-ScheduledTask -Action $A -Trigger $T -Principal $Principal
-#Register-ScheduledTask StartEverything -InputObject $D
-
 #cinst origin 
