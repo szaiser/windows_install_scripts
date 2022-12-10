@@ -19,7 +19,7 @@ cinst chocolatey
 cinst boxstarter
 cinst keypirinha
 cinst vscode
-# cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"' 
+choco install notepadplusplus.install
 cinst firefox
 cinst potplayer
 cinst 7zip.install
