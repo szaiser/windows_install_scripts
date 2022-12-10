@@ -16,63 +16,32 @@ New-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explo
 ##################################################################################################################
 
 cinst chocolatey
-cinst chocolateygui 
 cinst boxstarter
-cinst powershell 
 cinst dropbox
-cinst procexp
-#cinst geforce-experience 
-#cinst geforce-game-ready-driver
-#cinst logitechgaming 
-cinst multicommander
 cinst keypirinha
-cinst notepadplusplus.install 
+cinst vscode
 # cinst notepadreplacer -ia '"/NOTEPAD=""C:\Program Files (x86)\Notepad++\notepad++.exe"" /VERYSILENT"' 
 cinst firefox
-cinst strawberryperl 
-cinst googlechrome
-cinst javaruntime 
 cinst potplayer
 cinst 7zip.install
 cinst git
-#cinst winscp.install
 cinst keepass
 cinst kitty --package-parameters='/Portable'
-cinst tortoisehg 
 cinst teamviewer
-cinst virtualbox
+cinst docker-desktop
 cinst windirstat
-#cinst consolez
 cinst foxitreader 
-cinst pdfcreator
-cinst imagemagick
-cinst sumatrapdf.install
-#cinst pdfxchangeviewer
+cinst pdf24
 cinst autohotkey.install 
 cinst irfanview 
 cinst inkscape
 cinst blender
 cinst paint.net
 cinst lockhunter 
-cinst skype
 cinst sysinternals
-cinst everything -params '"/service /run-on-system-startup /efu-association"'
 
-cinst jetbrainstoolbox
-
-
-cinst miktex
-cinst ghostscript.app
-cinst imagemagick.app
-cinst texniccenter
-cinst clink
-#cinst zotero-standalone 
-#cinst thunderbird
-#cinst gimp
 #cinst steam
 #cinst uplay 
-cinst spotify
-#cinst f.lux
-#cinst nmap #network scanner
-cinst procmon 
+#cinst spotify
+#cinst procmon 
 #cinst origin 
