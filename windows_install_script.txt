@@ -23,7 +23,7 @@ choco install notepadplusplus.install
 cinst firefox
 cinst potplayer
 cinst 7zip.install
-cinst git
+cinst git.install
 cinst keepass
 cinst kitty --package-parameters='/Portable'
 cinst teamviewer
@@ -38,9 +38,17 @@ cinst blender
 cinst paint.net
 cinst lockhunter 
 cinst sysinternals
+cinst winscp.install
 
-#cinst steam
-#cinst uplay 
-#cinst spotify
-#cinst procmon 
-#cinst origin 
+cinst anaconda3
+cinst telegram
+cinst beyondcompare
+cinst veracrypt
+cinst screenpresso
+cinst spotify
+
+cinst steam
+cinst ubisoft-connect 
+cinst goggalaxy
+cinst origin 
+cinst epicgameslauncher
